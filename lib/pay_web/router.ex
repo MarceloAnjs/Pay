@@ -7,6 +7,11 @@ defmodule PayWeb.Router do
 
   scope "/api", PayWeb do
     pipe_through :api
+
+    get "/", WelcomeController, :index
+
+    post "/users", UsersController, :create
+
   end
 
   # Enables LiveDashboard only for development
